@@ -6,7 +6,7 @@ class PapaSignatureMixin:
         self.signature_level = signature_level
 
     def get_papa_info(self) -> str:
-        return f"PAPA SIGNATURE ACTIVATED! Level: {self.signature_level}% 🍰"
+        return f"PAPA SIGNATURE ACTIVATED! Level: {self.signature_level}%"
 
 class Product(ABC):
     def __init__(self, name: str, price: float, stock: int, category: str):
@@ -104,7 +104,7 @@ class PapaBakery:
 
 # ================== DEMO (INI YANG BARU) ==================
 if __name__ == "__main__":
-    print("🚀 Papa Bakery System Started!\n")
+    print(" Papa Bakery System Started!\n")
     
     bakery = PapaBakery()
     
@@ -114,18 +114,18 @@ if __name__ == "__main__":
     bakery.add_product(redvelvet)
     bakery.add_product(croffle)
     
-    print("✅ Produk berhasil ditambahkan:")
+    print(" Produk berhasil ditambahkan:")
     print(bakery.generate_stock_report())
     
     # Transaksi
-    print("\n💰 Melakukan transaksi...")
+    print("\n Melakukan transaksi...")
     total = bakery.sell_item("Red Velvet Cake", 3)
     print(f"Terjual Red Velvet Cake x3 → Total: Rp {total:,}")
     
-    print("\n📊 Laporan Stok Terbaru:")
+    print("\n Laporan Stok Terbaru:")
     print(bakery.generate_stock_report())
     
-    print("\n📋 Laporan Transaksi:")
+    print("\n Laporan Transaksi:")
     print(bakery.generate_sales_report())
     
-    print("\n✅ Sistem Papa Bakery berjalan dengan baik!")
+    print("\n Sistem Papa Bakery berjalan dengan baik!")
